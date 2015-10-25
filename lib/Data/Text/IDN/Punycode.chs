@@ -76,7 +76,7 @@ encode input maybeIsCase = Unsafe.unsafePerformIO io where
 				outBuf
 			
 			let rc = fromIntegral c_rc
-			if rc == fromEnum OVERFLOW
+			if rc == fromEnum BIG_OUTPUT
 				then return Nothing
 				else if rc == fromEnum SUCCESS
 					then do
